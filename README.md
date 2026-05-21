@@ -1,106 +1,133 @@
 # Operator Health
 
-Operator Health is a GreyNOC project focused on helping security operations teams understand, monitor, and improve the health of SOC operators and their workflows.
+Operator Health is a GreyNOC manual for understanding, protecting, and sustaining the human side of security operations.
 
-The project is intended to support defensive cybersecurity operations by giving teams a clear way to track operator workload, alert fatigue, triage flow, escalation pressure, response consistency, and overall shift readiness.
+This manual focuses on the condition of the SOC operator: workload, attention, fatigue, alert pressure, shift readiness, communication, decision-making, and the habits that help analysts stay effective during defensive cybersecurity operations.
+
+It is not an application, dashboard, automation platform, or software roadmap. It is a practical guide for SOC leaders, analysts, and operators who need a clear reference for maintaining healthy, reliable security operations.
 
 ## Purpose
 
-Security operations centers depend on both technical visibility and human readiness. Operator Health is designed to help answer questions like:
+Security operations depend on people as much as they depend on tools. Even the best SIEM, EDR, ticketing system, or alert pipeline can fail operationally when the people watching the environment are overloaded, distracted, fatigued, or unsupported.
 
-- Are operators overloaded by alert volume?
-- Are high-priority investigations being handled quickly enough?
-- Are handoffs, escalations, and shift transitions healthy?
-- Are analysts experiencing alert fatigue or workflow bottlenecks?
-- Where can automation reduce repetitive work without losing human judgment?
+The purpose of this manual is to provide guidance for recognizing and managing operator health before it affects response quality.
 
-## Planned Capabilities
+Operator Health should help answer questions such as:
 
-This repository is currently a foundation for the project. Planned areas include:
+- Is the operator mentally and operationally ready for the shift?
+- Is alert pressure creating fatigue or tunnel vision?
+- Are investigations being handled with consistency and clarity?
+- Are handoffs clear enough for another operator to continue the work?
+- Are analysts taking on too much at once?
+- Is the SOC creating conditions that support good decisions?
 
-- Operator workload tracking
-- Alert triage health metrics
-- Shift and handoff visibility
-- Escalation and response-time monitoring
-- Fatigue and burnout indicators
-- SOC workflow reporting
-- Integration with GreyNOC defensive security tooling
-- Dashboards for analyst and team-level operational health
+## Scope
 
-## Example Metrics
+This manual covers principles, observations, and practices related to SOC operator health, including:
 
-Potential metrics for future implementation include:
+- Alert fatigue
+- Cognitive load
+- Shift readiness
+- Triage discipline
+- Escalation pressure
+- Handoff quality
+- Communication habits
+- Investigation pacing
+- Burnout warning signs
+- Human reliability in defensive operations
 
-| Category | Example Metrics |
-| --- | --- |
-| Alert Load | Alerts assigned, alerts closed, alerts reopened |
-| Triage Flow | Mean time to acknowledge, mean time to triage, mean time to escalate |
-| Operator Load | Active investigations, queued alerts, overdue tasks |
-| Shift Health | Handoff quality, unresolved critical alerts, open escalations |
-| Fatigue Signals | Repeated alerts, high false-positive volume, extended investigation time |
-| Team Readiness | Coverage gaps, role availability, escalation capacity |
+This manual does not define or ship software. Any references to metrics, checklists, or workflows are intended as manual guidance unless stated otherwise.
 
-## Project Status
+## Core Concept
 
-Status: early planning / initial repository setup
+Operator health is the state of readiness, focus, workload balance, and decision-making capacity of the person responsible for monitoring and responding to security events.
 
-The current repository is a starting point. Implementation details, architecture, setup instructions, and contribution guidelines will be added as the codebase develops.
+A healthy operator is not simply someone who is present at the console. A healthy operator is alert, supported, properly loaded, able to communicate clearly, and capable of making sound decisions under pressure.
 
-## Suggested Repository Structure
+## Why Operator Health Matters
 
-A future version of this project may use a structure similar to:
+Poor operator health can lead to:
+
+- Missed alerts
+- Slower triage
+- Weak documentation
+- Poor handoffs
+- Delayed escalation
+- Repeated mistakes
+- Overconfidence or tunnel vision
+- Burnout
+- Reduced trust in the SOC process
+
+Strong operator health supports:
+
+- Better alert handling
+- Clearer investigation notes
+- Faster escalation decisions
+- More reliable shift transitions
+- Better teamwork
+- Stronger defensive outcomes
+
+## Manual Sections
+
+This repository may be organized into manual sections over time, such as:
 
 ```text
 Operator-Health/
-├── docs/                 # Architecture notes, design docs, and planning material
-├── src/                  # Application source code
-├── tests/                # Unit and integration tests
-├── dashboards/           # Dashboard definitions or UI assets
-├── integrations/         # Connectors for SIEM, ticketing, and alert sources
-├── scripts/              # Utility and automation scripts
-└── README.md
+├── README.md
+├── alert-fatigue.md
+├── shift-readiness.md
+├── triage-discipline.md
+├── handoffs.md
+├── escalation-pressure.md
+├── communication.md
+└── burnout-warning-signs.md
 ```
 
-## Getting Started
+Each section should be written as practical guidance that a SOC operator or team lead can read and apply without needing to run code or install tools.
 
-There is no runnable application in this repository yet.
+## Practical Use
 
-Once implementation begins, this section should include:
+This manual can be used as:
 
-1. Required dependencies
-2. Environment variables
-3. Local development setup
-4. Test commands
-5. Deployment instructions
-6. Integration setup for supported SOC tools
+- A reference for SOC operators
+- A training aid for new analysts
+- A checklist source for shift leads
+- A discussion guide for improving SOC habits
+- A baseline for documenting operator wellness practices
+- A reminder that defensive operations are both technical and human
 
-## Security Notes
+## Guiding Principles
 
-Operator Health may eventually process sensitive operational data. Future development should follow these principles:
+- Protect the operator so the operator can protect the network.
+- Reduce unnecessary noise where possible.
+- Keep handoffs clear, brief, and useful.
+- Escalate early when risk or uncertainty is high.
+- Treat fatigue as an operational risk, not a personal weakness.
+- Document decisions clearly enough that another operator can understand them later.
+- Build SOC habits that support calm, accurate, repeatable response.
 
-- Do not commit secrets, tokens, API keys, or production credentials.
-- Avoid storing unnecessary personally identifiable information.
-- Limit access to operator health data based on role and need-to-know.
-- Log only what is needed for troubleshooting and auditing.
-- Treat analyst performance and workload data carefully and ethically.
+## Notes on Sensitive Information
 
-## Roadmap
+This manual should not include private personnel details, medical information, credentials, customer data, or sensitive operational records.
 
-Initial roadmap ideas:
-
-- Define core operator health metrics
-- Design a lightweight data model
-- Add sample SOC workflow data
-- Build an initial dashboard or report view
-- Add alert-source integration patterns
-- Add documentation for privacy, access control, and ethical use
+When using examples, keep them generic and focused on process rather than individual performance.
 
 ## Contributing
 
-Contribution guidelines have not been defined yet.
+Contributions should improve the clarity, usefulness, and practicality of the manual.
 
-For now, keep changes focused, documented, and aligned with the project goal of improving SOC operator visibility, readiness, and defensive workflow health.
+Good contributions may include:
+
+- Clear definitions
+- Operator checklists
+- Shift-readiness guidance
+- Handoff examples
+- Fatigue warning signs
+- Practical SOC scenarios
+- Lessons learned from defensive operations
+
+Avoid adding application setup instructions, code scaffolding, dashboards, or product roadmap language unless the purpose of this repository changes.
 
 ## License
 
-No license has been added yet. Add a license before distributing or reusing this project outside the intended GreyNOC scope.
+No license has been added yet. Add a license before distributing or reusing this manual outside the intended GreyNOC scope.
